@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Showcase Exploring South Africa</title>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <!-- SEO: META KEYWORDS -->
+    <meta name="keywords"
+        content="South Africa tourism, South African tourist attractions, Cape Town attractions, Durban beaches, Drakensberg mountains, South Africa travel destinations">
+
+    <!-- SEO: META DESCRIPTION -->
+    <meta name="description"
+        content="Explore South Africa's top travel destinations, including Cape Town, Durban and the Drakensberg. Discover attractions, beaches, mountains and travel experiences.">
+
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Explore South Africa</h1>
+
+        <p>Discover beautiful destinations across the country!</p>
+    </header>
+
+    <main>
+        <!--Search Section-->
+        <section class="search-section">
+
+
+            <h2>Find your next adventure</h2>
+
+            <p> Search for a destination or province</p>
+
+            <input type="text" id="searchInput" placeholder="Search Destinations..." aria-label="Search Destinations">
+
+
+        </section>
+
+
+        <!--Destination Card-->
+        <section class="destinations">
+            <h2>Popular Destinations</h2>
+
+            <div class="card-container">
+
+                <!--Destination 1-->
+                <article class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800" alt="Cape Town"
+                        class="gallery-image" tabindex="0">
+
+                    <div class="card-content">
+                        <h3>Cape Town</h3>
+
+                        <p class="province">
+                            Western Cape
+                        </p>
+
+                        <p>
+                            Discover beautful beaches, table mountain and city
+                            attractions
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More information
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                    Visit Table Mountain and explore the
+                                    V&A Waterfront and enjoy the scenic
+                                    coastline.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!--Destination 2-->
+                <article class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1577948000111-9c970dfe3743?w=800" alt="Durban"
+                        class="gallery-image" tabindex="0">
+
+                    <div class="card-content">
+                        <h3>Durban</h3>
+
+                        <p class="province">
+                            KZN
+                        </p>
+
+                        <p>
+                            Discover beautful beaches, warm weather and city
+                            attractions
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More information
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                    Explore The golden Mile, visit Ushaka Marine world
+                                    and experience the local cuisine
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Destination 3-->
+                <article class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800"
+                        alt="Mountain Landscape" class="gallery-image" tabindex="0">
+
+                    <div class="card-content">
+                        <h3>Drakensburg</h3>
+
+                        <p class="province">
+                            KZN
+                        </p>
+
+                        <p>
+                            Experience breathtaking mountains and hiking trails with natural
+                            beauty, especially when it snows.
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More information
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                    Explore the mountains and enjoy the scenic
+                                    views.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- No Results Message -->
+            <p id="noResults" hidden>
+                No destinations found. Please try another search.
+            </p>
+
+        </section>
+
+
+    </main>
+
+    <!--Lightbox Overlay-->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Expanded Destination Image">
+
+        <!--Close button-->
+        <button class="close-btn" id="closeLightbox" aria-label="Close Image">
+
+            &times;
+        </button>
+
+        <!--Enlarged image-->
+        <img src="" alt="" id="lightboxImage">
+
+    </div>
+
+    <!--Website footer-->
+    <footer>
+        <p>
+            Explore South africa | Practical project
+        </p>
+    </footer>
+
+    <!--Link to JS-->
+    <script src="Js/script.js"></script>
+</body>
+
+</html>

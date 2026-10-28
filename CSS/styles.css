@@ -1,0 +1,272 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/*Website header */
+header{
+    background-color: #164b8c;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1{
+    margin-bottom: 10px;
+}
+
+main{
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+h2{
+    color: #164b8c;
+}
+
+/*Search Section */
+.search-section{
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#searchInput{
+    width: 100%;
+    max-width: 500px;
+    padding: 14px;
+    font-size: 16px;
+
+    border: 2px solid #ddd;
+    border-radius: 8px;
+
+    /*Smooth border color change change */
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus{
+    outline: none;
+    border-color: #007bff;
+}
+
+/*Destination Cards */
+.card-container{
+    display: grid;
+
+    /*Responsive card layout */
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%,280px),1fr)
+    );
+
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.destination-card{
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    /*Animation for card hover */
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/*Raise card slightly on hover */
+.destination-card:hover{
+    transform: translateY(-5px);
+}
+
+/*Destination Images */
+.gallery-image{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    
+    transition: opacity 0.3s ease;
+}
+
+.gallery-image:hover{
+    opacity: 0.8;
+}
+
+.gallery-image:focus-visible{
+    outline: 3px solid #007bff;
+    outline-offset: -3px;
+}
+
+/*Card text */
+.card-content{
+    padding: 20px;
+}
+
+.card-content h3{
+    margin-top: 0;
+    color: #164b8c;
+    font-size: 25px;
+}
+
+.province{
+    color: #777;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/*Accodrion */
+.accordion{
+    width: 100%;
+    padding: 14px;
+    font-weight: bold;
+
+    background-color:#007bff;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+    font-size: 15px;
+
+    /*Smooth background change */
+    transition: background-color 0.3s ease;
+}
+
+.accordion:hover{
+    background-color: #0056b3;
+}
+
+.accordion:active{
+    background-color: #004494;
+}
+
+/*Accordion content intitially collapsed */
+.panel{
+    display: grid;
+    grid-template-rows: 0fr;
+
+    transition: grid-template-rows 0.4s ease;
+}
+
+/*Accordion content when expanded */
+.panel-open{
+    grid-template-rows: 1fr;
+
+}
+
+.panel-content{
+    overflow: hidden;
+}
+
+.panel-content p{
+    padding: 10px 0;
+    margin: 0;
+}
+
+/*No result message */
+#noResult{
+    text-align: center;
+    color: #b42318;
+    margin-top: 25px;
+}
+
+[hidden]{
+    display: none !important;
+}
+
+/*Lightbox */
+.lightbox{
+    display: none;
+
+    /*Covers the entire screen */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.9);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+/* Show the lightbox */
+.lightbox.show{
+    display: flex;
+
+    /*Run fade in animation */
+    animation: fadeIn 0.3s ease;
+}
+
+/* Enlarged Image */
+#lightboxImage{
+    max-width: 85%;
+    max-height: 80vh;
+
+    object-fit: contain;
+    border-radius: 8px;
+
+    /*Run zoom animation */
+    animation: zoomIn 0.3s ease;
+}
+
+/*Lightbox close button */
+.close-btn{
+    position: absolute;
+    top:20px;
+    right: 30px;
+
+    background: none;
+    border: none;
+
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* CSS Animations */
+
+/*Lightbox fade-in */
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+/*images zoomIn */
+@keyframes zoomIn{
+
+    from{
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+footer{
+    background-color: #164b8c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
